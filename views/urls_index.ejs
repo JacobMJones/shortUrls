@@ -10,7 +10,13 @@
     <ul>
       <% for(var attribute in urls){ %>
         <li><%- attribute %> - <%- urls[attribute]%> </li> 
-       <form  method="POST" action="/urls/<%= attribute %>/delete">    
+  
+       
+       <form  method="GET" action="/urls/<%= attribute %>/">    
+       <input type="submit" value="Edit">
+       </form>
+
+      <form  method="POST" action="/urls/<%= attribute %>/delete">    
        <input type="submit" value="Delete">
     </form>
       <%}%>

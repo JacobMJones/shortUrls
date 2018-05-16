@@ -29,7 +29,7 @@ console.log('in edit', id, url);
   
   if (url) {
     console.log('in change url');
-     urlDatabase.id = req.body.longURL;
+     urlDatabase[id] = req.body.longURL;
      res.redirect("/urls")
   } else {
     console.log('NOT in change url');

@@ -9,12 +9,14 @@
     <!-- Add your EJS code here -->
     <ul>
       <% for(var attribute in urls){ %>
-        <li><%- attribute %> - <%- urls[attribute]%></li> 
-       
+        <li><%- attribute %> - <%- urls[attribute]%> </li> 
+       <form  method="POST" action="/urls/<%= attribute %>/delete">    
+       <input type="submit" value="Delete">
+    </form>
       <%}%>
              </ul>
 </body>
 </html>
 
 
-
+    

@@ -8,6 +8,11 @@
 <body>
      <p><%= longURL %>  <%=shortURL%></p>
 
+      <form action="/urls/<%=shortURL%>" method="POST">
+      <label for="changeURL">Change URL:</label>
       
+      <input id="changeURL" type="text" name="longURL" placeholder="http://" style="width: 300px">
+      
+      <input type="submit" value="Submit">
 </body>
 </html>
